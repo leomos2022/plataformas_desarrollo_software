@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test GitHub Pages</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 50px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-align: center;
+        }
+        h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+        }
+        .status {
+            background: rgba(255,255,255,0.1);
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>🚀 GitHub Pages Test</h1>
+    <div class="status">
+        <h2>✅ GitHub Pages está funcionando correctamente!</h2>
+        <p>Repositorio: leomos2022/inferencias</p>
+        <p>Timestamp: {{ new Date().toISOString() }}</p>
+    </div>
+    <div class="status">
+        <h3>🔗 Enlaces:</h3>
+        <p><a href="index.html" style="color: #FFD700;">🏠 Página Principal</a></p>
+        <p><a href="cartilla-flipbook.html" style="color: #FFD700;">📖 Cartilla Flipbook</a></p>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('GitHub Pages Test - Funcionando correctamente');
+            // Actualizar timestamp
+            const timestamp = document.querySelector('p:contains("Timestamp")');
+            if (timestamp) {
+                timestamp.textContent = `Timestamp: ${new Date().toISOString()}`;
+            }
+        });
+    </script>
+</body>
+</html>
+</ELEMENT>
