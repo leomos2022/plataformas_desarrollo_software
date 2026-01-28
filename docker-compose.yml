@@ -1,0 +1,57 @@
+version: '3.8'
+
+services:
+  # Aplicación Flask
+  web:
+    build: .
+    container_name: dev_env_app
+    ports:
+      - "5000:5000"
+    environment:
+      - FLASK_ENV=development
+      - DATABASE_URL=postgresql://postgres:password@db:5432/devdb
+    depends_on:
+      - db
+    volumes:
+      - ./App:/app/App
+    networks:
+      - dev_network
+    restart: unless-stopped
+
+  # Base de datos PostgreSQL
+  db:
+    image: postgres:15-alpine
+    container_name: dev_env_db
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=password
+      - POSTGRES_DB=devdb
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    networks:
+      - dev_network
+    restart: unless-stopped
+
+  # PgAdmin para administrar la BD
+  pgadmin:
+    image: dpage/pgadmin4:latest
+    container_name: dev_env_pgadmin
+    environment:
+      - PGADMIN_DEFAULT_EMAIL=admin@admin.com
+      - PGADMIN_DEFAULT_PASSWORD=admin
+    ports:
+      - "5050:80"
+    depends_on:
+      - db
+    networks:
+      - dev_network
+    restart: unless-stopped
+
+volumes:
+  postgres_data:
+
+networks:
+  dev_network:
+    driver: bridge
