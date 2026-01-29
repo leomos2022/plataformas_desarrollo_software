@@ -1,0 +1,102 @@
+Requirement already satisfied: pip in ./dev_env/lib/python3.12/site-packages (25.3)
+Requirement already satisfied: flask>=3.0.0 in ./dev_env/lib/python3.12/site-packages (3.1.2)
+Requirement already satisfied: SQLAlchemy>=2.0.0 in ./dev_env/lib/python3.12/site-packages (2.0.46)
+Requirement already satisfied: pytest>=7.4.0 in ./dev_env/lib/python3.12/site-packages (9.0.2)
+Requirement already satisfied: pytest-cov>=4.1.0 in ./dev_env/lib/python3.12/site-packages (7.0.0)
+Requirement already satisfied: python-dotenv>=1.0.0 in ./dev_env/lib/python3.12/site-packages (1.2.1)
+Requirement already satisfied: black>=23.0.0 in ./dev_env/lib/python3.12/site-packages (26.1.0)
+Requirement already satisfied: flake8>=6.0.0 in ./dev_env/lib/python3.12/site-packages (7.3.0)
+Requirement already satisfied: blinker>=1.9.0 in ./dev_env/lib/python3.12/site-packages (from flask>=3.0.0) (1.9.0)
+Requirement already satisfied: click>=8.1.3 in ./dev_env/lib/python3.12/site-packages (from flask>=3.0.0) (8.3.1)
+Requirement already satisfied: itsdangerous>=2.2.0 in ./dev_env/lib/python3.12/site-packages (from flask>=3.0.0) (2.2.0)
+Requirement already satisfied: jinja2>=3.1.2 in ./dev_env/lib/python3.12/site-packages (from flask>=3.0.0) (3.1.6)
+Requirement already satisfied: markupsafe>=2.1.1 in ./dev_env/lib/python3.12/site-packages (from flask>=3.0.0) (3.0.3)
+Requirement already satisfied: werkzeug>=3.1.0 in ./dev_env/lib/python3.12/site-packages (from flask>=3.0.0) (3.1.5)
+Requirement already satisfied: typing-extensions>=4.6.0 in ./dev_env/lib/python3.12/site-packages (from SQLAlchemy>=2.0.0) (4.15.0)
+Requirement already satisfied: iniconfig>=1.0.1 in ./dev_env/lib/python3.12/site-packages (from pytest>=7.4.0) (2.3.0)
+Requirement already satisfied: packaging>=22 in ./dev_env/lib/python3.12/site-packages (from pytest>=7.4.0) (26.0)
+Requirement already satisfied: pluggy<2,>=1.5 in ./dev_env/lib/python3.12/site-packages (from pytest>=7.4.0) (1.6.0)
+Requirement already satisfied: pygments>=2.7.2 in ./dev_env/lib/python3.12/site-packages (from pytest>=7.4.0) (2.19.2)
+Requirement already satisfied: coverage>=7.10.6 in ./dev_env/lib/python3.12/site-packages (from coverage[toml]>=7.10.6->pytest-cov>=4.1.0) (7.13.2)
+Requirement already satisfied: mypy-extensions>=0.4.3 in ./dev_env/lib/python3.12/site-packages (from black>=23.0.0) (1.1.0)
+Requirement already satisfied: pathspec>=1.0.0 in ./dev_env/lib/python3.12/site-packages (from black>=23.0.0) (1.0.4)
+Requirement already satisfied: platformdirs>=2 in ./dev_env/lib/python3.12/site-packages (from black>=23.0.0) (4.5.1)
+Requirement already satisfied: pytokens>=0.3.0 in ./dev_env/lib/python3.12/site-packages (from black>=23.0.0) (0.4.0)
+Requirement already satisfied: mccabe<0.8.0,>=0.7.0 in ./dev_env/lib/python3.12/site-packages (from flake8>=6.0.0) (0.7.0)
+Requirement already satisfied: pycodestyle<2.15.0,>=2.14.0 in ./dev_env/lib/python3.12/site-packages (from flake8>=6.0.0) (2.14.0)
+Requirement already satisfied: pyflakes<3.5.0,>=3.4.0 in ./dev_env/lib/python3.12/site-packages (from flake8>=6.0.0) (3.4.0)
+
+======================================================================
+  AUTOMATIZACIÓN DE ENTORNO DE DESARROLLO - EMPRESA XYZ
+  Plataformas de Desarrollo de Software
+======================================================================
+
+======================================================================
+▶ Paso 1: Creando entorno virtual 'dev_env'
+======================================================================
+
+✓ Entorno virtual 'dev_env' creado exitosamente
+
+======================================================================
+▶ Paso 2: Instalando dependencias (flask, SQLAlchemy, pytest)
+======================================================================
+
+✓ Dependencias instaladas exitosamente
+
+======================================================================
+▶ Paso 3: Creando estructura de carpetas
+======================================================================
+
+✓ Creado: App/
+✓ Creado: App/models/
+✓ Creado: App/routes/
+✓ Creado: App/utils/
+✓ Creado: Tests/
+✓ Creado: Tests/unit/
+✓ Creado: Tests/integration/
+✓ Creado: config/
+✓ Creado: docs/
+
+✓ Estructura de carpetas creada exitosamente
+
+======================================================================
+▶ Paso 4: Creando archivo requirements.txt
+======================================================================
+
+✓ Archivo requirements.txt creado
+
+======================================================================
+▶ Paso 5: Creando archivo README.md
+======================================================================
+
+✓ Archivo README.md creado
+
+======================================================================
+▶ Paso 6: Creando archivos de ejemplo
+======================================================================
+
+✓ Archivos de configuración creados (.env.example, .gitignore)
+
+======================================================================
+▶ ✓ CONFIGURACIÓN COMPLETADA EXITOSAMENTE
+======================================================================
+
+
+El entorno de desarrollo ha sido configurado correctamente.
+
+Para comenzar a trabajar:
+
+1. Activa el entorno virtual:
+   source dev_env/bin/activate
+
+2. Verifica la instalación:
+   pip list
+
+3. Ejecuta los ejemplos de código:
+   python App/main.py
+
+4. Ejecuta las pruebas:
+   pytest
+
+¡El entorno está listo para desarrollo!
+        
